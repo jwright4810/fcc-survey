@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="style.css" type="text/css" rel="stylesheet">
+    <title>FCC Survey Form</title>
+</head>
+<body>
+
+    <header>    
+        <div class="header"> 
+            <h1 id="title">Superheroes Anonymous </h1>
+            <p id="description">The world needs our superheroes, but sometimes we forget about what our superheroes need.</p>
+            <hr>
+            <p>Join us today, meet others just like you and get the support you deserve.</p>
+        </div>
+   </header>
+    
+   <div class="form-container">
+        <form id="survey-form" method="GET">
+            
+            <!--identity info starts here-->
+            
+            <div class="formRow">
+                <div class="labels">
+                    <label id="name-label" for="name">* Name: </label>
+                </div>
+            
+                <div class="user-input">
+                    <input class="input-field" type="text" id="name" name="name" placeholder="First name Last name" required autofocus>
+                </div>
+            </div>
+            
+            <div class="formRow">
+                <div class="labels">
+                    <label id="superName-label" for="superhero">SuperHero identity:</label>
+                </div>    
+            
+                <div class="user-input">
+                    <input class="input-field" type="text" id="superhero" name="superhero" placeholder="Your Superhero name" required>
+                </div>
+            </div>
+
+            <div class="formRow">
+                <div class="labels">
+                    <label id="email-label" for="email">Email:</label>
+                </div>
+            
+                <div class="user-input">
+                    <input class="input-field" type="email" id="email" name="email" placeholder="email@email.com" required>
+                </div>
+            </div>
+            
+            <div class="formRow">
+                <div class="labels">
+                    <label id="number-label" for="number">Years fighting crime:</label>
+                </div>
+
+                <div class="user-input">
+                    <input class="input-field" type="number" id="number" name="number" min="1" max="100" placeholder="1" required>
+                </div>
+            </div>
+
+            <!--Identity info ends here-->
+
+            <!--Selectors (i.e Dropdowns, radio, checkboxes) start here-->
+
+            <div class="formRow">   
+                <div class="labels">
+                    <label id="dropdown-label" for="dropdown">Identify your moral standpoint:</label>
+                </div>
+
+                <div class="input-tab">
+                    <select multiple id="dropdown" name="good-evil">
+                        <option disable value selected>Select an option</option>
+                        <option value="good">Good</option>
+                        <option value="evil">Evil</option>
+                        <option value="confused">Morally Confused</option>
+                        <option value="lost">Lost and hopeless</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+            </div>    
+
+           <div class="formRow">
+                <div class="labels">
+                    <label>Please select the year range you have been fighting crime:</label>
+                </div>
+
+                <div class="input-tab">
+                    <ul id="tenure" style="list-style: none;">
+                        <li class="radio"><input type="radio" name="radio-button" value="jr">Less than 3 years</li>
+                        <li class="radio"><input type="radio" name="radio-button" value="mid">3 - 10 years</li>
+                        <li class="radio"><input type="radio" name="radio-button" value="senior">10 + years</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="formRow">
+                <div class="labels"> 
+                    <label>Check all the boxes that best describe your powers:</label>
+                </div>
+
+                <div class="input-tab">
+
+                    <ul id="powers" style="list-style: none;">
+                        <li><label for="strength"><input id="strength" type="checkbox" name="powers" value="1">Strength</label></li>   
+                        <li><label for="speed"><input id="speed" type="checkbox" name="powers" value="2">Speed</label></li>
+                        <li><label for="xray"><input id="xray" type="checkbox" name="powers" value="3">X-Ray Vision</label></li>
+                        <li><label for="other"><input id="other" type="checkbox" name="powers" value="4">Other</label></li>
+                    </ul>    
+                </div>
+            </div>
+
+            <!--Selectors end here and comment section begins below-->
+
+            <div class="formRow">
+                <div class=labels>
+                    <label for="comments">Brief summary of why you're joining S.H.A.</label>
+                </div>
+
+                <div class="user-input" id="comments">
+                    <textarea class="input-field" form="survey-form" rows="4" cols="50" placeholder="enter comments here." maxlength="600"></textarea>
+                </div>
+            </div>
+
+            <div class="btn">
+                <button id="submit">Submit</button>
+            </div>  
+        </form>
+    </div>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</body>
+<footer></footer>
+</html>
